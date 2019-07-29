@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="php Travels Automation Test Suite">
+	<test name="TestphpTravelsTest">
+		<classes>
+			<class name="com.phptravels.qa.testcases.LoginPageTest"/>
+			<class name="com.phptravels.qa.testcases.HomePageTest"/>
+			<class name="com.phptravels.qa.testcases.MyprofilePageTest"/>
+		</classes>
+		
+		
+	</test>
+</suite>
