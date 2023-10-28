@@ -8,7 +8,9 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -38,16 +40,15 @@ public class TestBase {
 		BasicConfigurator.configure();
 	}
 	public static void initBrowser() {
-		String driverPath=System.getProperty("user.dir")+"/resources/driver";
 		String _browser=prop.getProperty("Browser");
 		if(_browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", driverPath+"/chromedriver.exe" );
+			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 		}else if(_browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", driverPath+"/geckodriver.exe" );
+			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
 		}else if(_browser.equalsIgnoreCase("internet explorer")) {
-			System.setProperty("webdriver.ie.driver", driverPath+"/IEDriverServer.exe" );
+			WebDriverManager.iedriver().setup();
 			driver=new InternetExplorerDriver();
 		}else {
 			System.out.println("Invalid Driver Name!!!");
