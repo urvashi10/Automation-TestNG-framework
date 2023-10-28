@@ -12,7 +12,7 @@ import com.crm.qa.base.TestBase;
 public class TakeScrshot extends TestBase{
 	public static void takeScreenshotTest() throws IOException {
 		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		File destFile=new File(System.getProperty("user.dir")+"/Screenshot/"+System.currentTimeMillis()+".png");
+		File destFile=new File(System.getProperty("user.dir")+"/Reports/Screenshot/"+System.currentTimeMillis()+".png");
 		FileUtils.copyFile(scrFile, destFile);
 	}
 }

@@ -28,7 +28,7 @@ public class ExtentReportListener implements IReporter{
 			String outputDirectory) {
 //		extent = new ExtentReports(outputDirectory + File.separator+ "Extent.html", true);
 
-		extent = new ExtentReports(System.getProperty("user.dir")+"/Extent-Report/"+getDate()+ "/Extent -"+getTime()+".html", true);
+		extent = new ExtentReports(System.getProperty("user.dir")+"/Reports/Extent-Report/"+getDate()+ "/Extent -"+getTime()+".html", true);
 		for (ISuite suite : suites) {
 			Map<String, ISuiteResult> result = suite.getResults();
 

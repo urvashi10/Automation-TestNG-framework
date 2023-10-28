@@ -6,7 +6,7 @@
 			<class name="com.phptravels.qa.testcases.HomePageTest"/>
 			<class name="com.phptravels.qa.testcases.MyprofilePageTest"/>
 		</classes>
-		
-		
+
+
 	</test>
 </suite>
