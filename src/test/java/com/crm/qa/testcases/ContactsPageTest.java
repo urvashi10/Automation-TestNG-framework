@@ -31,7 +31,6 @@ public class ContactsPageTest extends TestBase{
 		testUtil.switchToFrame();
 		contactsPage = homePage.clickOnContactsLink();
 	}
-	
 	@Test(priority=1)
 	public void verifyContactsPageLabel(){
 		Assert.assertTrue(contactsPage.verifyContactsLabel(), "contacts label is missing on the page");

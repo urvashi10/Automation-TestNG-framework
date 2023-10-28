@@ -26,7 +26,7 @@ public class CommonTest extends TestBase{
 		initBrowser();
 		loginPage=new LoginPage();
 		testUtil=new TestUtil();
-//		homePage=loginPage.login(prop.getProperty("userName"), prop.getProperty("password"));
+		homePage=loginPage.login(prop.getProperty("userName"), prop.getProperty("password"));
 		}
 	@AfterMethod
 	public void tearDown(){

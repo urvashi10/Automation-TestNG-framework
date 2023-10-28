@@ -44,10 +44,10 @@ public class TestBase {
 		}else {
 			System.out.println("Invalid Driver Name!!!");
 		}
-//		e_driver=new EventFiringWebDriver(driver);
-//		event=new WebDriverEvent();
-//		e_driver.register(event);
-//		driver=e_driver;
+		e_driver=new EventFiringWebDriver(driver);
+		event=new WebDriverEvent();
+		e_driver.register(event);
+		driver=e_driver;
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
