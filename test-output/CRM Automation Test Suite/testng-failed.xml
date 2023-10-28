@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [CRM Automation Test Suite]">
-  <listeners>
-    <listener class-name="com.crm.qa.report.ExtentReportListener"/>
-  </listeners>
-  <test thread-count="5" name="CRM Pro Testing (failed)">
-    <classes>
-      <class name="com.crm.qa.testcases.LoginPageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="loginPageTitleTest"/>
-          <include name="loginTest"/>
-          <include name="phpLogoImageTest"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.crm.qa.testcases.LoginPageTest -->
-    </classes>
-  </test> <!-- CRM Pro Testing (failed) -->
+	<listeners>
+		<listener class-name="com.crm.qa.report.ExtentReportListener" />
+	</listeners>
+	<test thread-count="5" name="CRM Pro Testing (failed)">
+		<classes>
+			<class name="com.crm.qa.testcases.LoginPageTest">
+				<methods>
+					<include name="tearDown" />
+					<include name="loginPageTitleTest" />
+					<include name="loginTest" />
+					<include name="phpLogoImageTest" />
+					<include name="setUp" />
+				</methods>
+			</class> <!-- com.crm.qa.testcases.LoginPageTest -->
+		</classes>
+	</test> <!-- CRM Pro Testing (failed) -->
 </suite> <!-- Failed suite [CRM Automation Test Suite] -->

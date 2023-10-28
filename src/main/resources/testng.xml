@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="CRM Automation Test Suite">
 	<listeners>
-		<listener class-name="com.crm.qa.report.ExtentReportListener" />
+		<!-- <listener class-name="com.crm.qa.report.ExtentReportListener" /> -->
+		<listener class-name="com.crm.qa.report.AnnotationTransfer" />
 	</listeners>
 	<test name="CRM Pro Testing ">
 		<classes>
 			<class name="com.crm.qa.testcases.LoginPageTest" />
-			<!-- <class name="com.crm.qa.testcases.HomePageTest" />
-			<class name="com.crm.qa.testcases.ContactPageTest" /> -->
+			<!-- <class name="com.crm.qa.testcases.HomePageTest" /> <class name="com.crm.qa.testcases.ContactPageTest" 
+				/> -->
 		</classes>
 	</test>
 </suite>

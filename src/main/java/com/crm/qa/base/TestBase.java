@@ -4,19 +4,21 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.openqa.selenium.support.events.WebDriverEventListener;
-
 import com.crm.qa.util.TestUtil;
 import com.crm.qa.util.WebDriverEvent;
 
 public class TestBase {
 	
 	public static WebDriver driver;
+	public static Logger log=Logger.getLogger(TestBase.class);
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
 	public static WebDriverEvent event;
@@ -28,6 +30,10 @@ public class TestBase {
 		}catch(Exception ex) {
 			ex.printStackTrace();
 		}
+	}
+	static {
+		PropertyConfigurator.configure(System.getProperty("user.dir")+"/src/main/resources/log4j.properties");
+		BasicConfigurator.configure();
 	}
 	public static void initBrowser() {
 		String driverPath=System.getProperty("user.dir")+"/resources/driver";
@@ -53,7 +59,7 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.Page_Load_Timeout, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.Implict_Wait, TimeUnit.SECONDS);
-		
+		log.info("Driver Lauched!!!");
 		driver.get(prop.getProperty("url"));
 	}
 	public static void closeBrowser() {
