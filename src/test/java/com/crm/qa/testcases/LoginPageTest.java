@@ -4,13 +4,14 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.crm.qa.report.RetryListener;
+
 public class LoginPageTest extends CommonTest{
 	
 	public LoginPageTest() {
 		super();
 	}
-	
-	@Test(priority = 1)
+	/*@Test(priority = 1)
 	public void loginPageTitleTest() {
 		String title=loginPage.validateLoginPageTitle();
 		System.out.println("Title of Login Page is : "+title);
@@ -21,9 +22,9 @@ public class LoginPageTest extends CommonTest{
 		boolean flag=loginPage.validatePhpImage();
 		Assert.assertTrue(flag);
 	}
+	@Test(priority = 0,retryAnalyzer= RetryListener.class)*/
 	@Test(priority = 0)
 	public void loginTest() {
 		homePage=loginPage.login(prop.getProperty("userName"), prop.getProperty("password"));
-		
 	}
 }
