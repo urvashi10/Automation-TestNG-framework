@@ -1,0 +1,71 @@
+11:09:24.765 [main] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >" at the top of the suite file [C:\Users\Urvashi\Documents\GitHub\Automation-TestNG-framework\src\main\resources\testng.xml] otherwise TestNG may fail or not work as expected.
+11:09:27.853 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:09:27.907 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:09:31.136 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:09:49.586 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:09:49.610 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:09:51.291 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:10:04.180 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:10:04.214 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:10:06.000 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:10:18.598 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:10:18.621 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:10:20.220 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:10:32.702 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:10:32.738 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:10:34.479 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:10:47.012 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:10:47.034 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:10:48.929 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:11:11.456 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:11:11.479 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:11:13.071 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:11:32.149 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:11:32.174 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:11:35.399 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:12:01.644 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:12:01.664 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:12:03.532 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:13:45.056 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  Command line suite
+
+11:13:45.787 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:13:45.845 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:13:48.496 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:19:17.281 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:19:17.345 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:19:20.420 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:19:39.163 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:19:39.204 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:19:40.998 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:20:03.966 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:20:04.025 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:20:05.868 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:20:49.801 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:20:49.826 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:20:51.753 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:30:38.154 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  Command line suite
+
+11:30:38.920 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:30:38.973 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:30:41.883 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:30:56.096 [main] INFO  com.crm.qa.testcases.LoginPageTest - Starting invalid login test
+11:31:06.177 [main] ERROR com.crm.qa.testcases.LoginPageTest - Error during invalid login test: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=141.0.7390.108)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bcd4393225adcff8af86b6d087c9b082, findElement {using=name, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.108, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\Urvashi\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49574}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49574/devtoo..., se:cdpVersion: 141.0.7390.108, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bcd4393225adcff8af86b6d087c9b082
+11:32:18.721 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  Command line suite
+
+11:32:19.633 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 141.0.7390.122 (resolved driver for Chrome 141)
+11:32:19.712 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Urvashi\.cache\selenium\chromedriver\win64\141.0.7390.122\chromedriver.exe
+11:32:23.088 [main] INFO  com.crm.qa.base.TestBase - Driver Lauched!!!
+11:32:38.469 [main] INFO  com.crm.qa.testcases.LoginPageTest - Starting login page title verification test
+11:32:38.486 [main] INFO  com.crm.qa.testcases.LoginPageTest - Login Page Title: CRMPRO
+11:32:38.493 [main] INFO  com.crm.qa.testcases.LoginPageTest - Login page title verification completed successfully

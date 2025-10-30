@@ -2,7 +2,6 @@ package com.crm.qa.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -12,22 +11,18 @@ public class LoginPage extends TestBase{
 
 	//Page factory Object Repository
 	@FindBy(name="username")
-	@CacheLookup
 	WebElement username;
 	
 	@FindBy(name="password")
-	@CacheLookup
 	WebElement password;
 	
 	@FindBy(xpath ="//*[@value=\"Login\"]")
-	@CacheLookup
 	WebElement loginBtn;
 	
 	@FindBy(xpath = "//*[@id=\"navbar-collapse\"]/ul/li[2]/a")
 	WebElement signUpBtn;
 
-	@FindBy(xpath = "/html/body/div[2]/div/div[1]/a/img")
-	@CacheLookup
+	@FindBy(xpath = "//img[contains(@class, 'img-responsive')]")
 	WebElement crmLogo;
 
 	//Initialize the Page Object 
@@ -47,6 +42,26 @@ public class LoginPage extends TestBase{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
     	js.executeScript("arguments[0].click();", loginBtn);
 		return new HomePage();
+	}
+
+	public void enterUsername(String uname) {
+		username.clear();
+		username.sendKeys(uname);
+	}
+
+	public void enterPassword(String pwd) {
+		password.clear();
+		password.sendKeys(pwd);
+	}
+
+	public void clickLoginButton() {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+    	js.executeScript("arguments[0].click();", loginBtn);
+	}
+
+	public String getErrorMessage() {
+		WebElement errorElement = driver.findElement(org.openqa.selenium.By.cssSelector(".error-message"));
+		return errorElement != null ? errorElement.getText() : null;
 	}
 }
 

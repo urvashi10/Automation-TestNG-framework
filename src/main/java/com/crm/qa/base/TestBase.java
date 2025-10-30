@@ -1,13 +1,13 @@
 package com.crm.qa.base;
 
 import java.io.FileInputStream;
+import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -22,10 +22,9 @@ import com.crm.qa.util.WebDriverEvent;
 public class TestBase {
 	
 	public static WebDriver driver;
-	public static Logger log=Logger.getLogger(TestBase.class);
+	public static Logger log = LogManager.getLogger(TestBase.class);
 	public static Properties prop;
-	public static EventFiringWebDriver e_driver;
-	public static WebDriverEvent event;
+	public static WebDriverWait wait;
 	public TestBase() {
 		try {
 			prop=new Properties();
@@ -35,10 +34,7 @@ public class TestBase {
 			ex.printStackTrace();
 		}
 	}
-	static {
-		PropertyConfigurator.configure(System.getProperty("user.dir")+"/src/main/resources/log4j.properties");
-		BasicConfigurator.configure();
-	}
+	// Log4j2 is automatically configured via log4j2.xml or log4j2.properties in the classpath
 	public static void initBrowser() {
 		String _browser=prop.getProperty("Browser");
 		if(_browser.equalsIgnoreCase("chrome")) {
@@ -60,8 +56,10 @@ public class TestBase {
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(TestUtil.Page_Load_Timeout, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(TestUtil.Implict_Wait, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.Page_Load_Timeout));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.Implict_Wait));
+		// Explicit wait helper for tests/page objects
+		wait = new WebDriverWait(driver, Duration.ofSeconds(TestUtil.Implict_Wait));
 		log.info("Driver Lauched!!!");
 		driver.get(prop.getProperty("url"));
 	}

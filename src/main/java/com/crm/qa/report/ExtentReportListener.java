@@ -16,9 +16,10 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.xml.XmlSuite;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 
 public class ExtentReportListener implements IReporter{
@@ -26,34 +27,35 @@ public class ExtentReportListener implements IReporter{
 	private ExtentReports extent;
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
 			String outputDirectory) {
-//		extent = new ExtentReports(outputDirectory + File.separator+ "Extent.html", true);
-
-		extent = new ExtentReports(System.getProperty("user.dir")+"/Reports/Extent-Report/"+getDate()+ "/Extent -"+getTime()+".html", true);
+		String reportPath = System.getProperty("user.dir")+"/Reports/Extent-Report/"+getDate()+ "/Extent -"+getTime()+".html";
+		ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
+		extent = new ExtentReports();
+		extent.attachReporter(spark);
+		
 		for (ISuite suite : suites) {
 			Map<String, ISuiteResult> result = suite.getResults();
 
 			for (ISuiteResult r : result.values()) {
 				ITestContext context = r.getTestContext();
 
-				buildTestNodes(context.getPassedTests(), LogStatus.PASS);
-				buildTestNodes(context.getFailedTests(), LogStatus.FAIL);
-				buildTestNodes(context.getSkippedTests(), LogStatus.SKIP);
+				buildTestNodes(context.getPassedTests(), Status.PASS);
+				buildTestNodes(context.getFailedTests(), Status.FAIL);
+				buildTestNodes(context.getSkippedTests(), Status.SKIP);
 			}
 		}
 
 		extent.flush();
-		extent.close();
 	}
 
-	private void buildTestNodes(IResultMap tests, LogStatus status) {
+	private void buildTestNodes(IResultMap tests, Status status) {
 		ExtentTest test;
 
 		if (tests.size() > 0) {
 			for (ITestResult result : tests.getAllResults()) {
-				test = extent.startTest(result.getMethod().getMethodName());
+				test = extent.createTest(result.getMethod().getMethodName());
 
-				test.setStartedTime(getTime(result.getStartMillis()));
-				test.setEndedTime(getTime(result.getEndMillis()));
+				test.getModel().setStartTime(getTime(result.getStartMillis()));
+				test.getModel().setEndTime(getTime(result.getEndMillis()));
 
 				for (String group : result.getMethod().getGroups())
 					test.assignCategory(group);
@@ -64,8 +66,6 @@ public class ExtentReportListener implements IReporter{
 					test.log(status, "Test " + status.toString().toLowerCase()
 							+ "ed");
 				}
-
-				extent.endTest(test);
 			}
 		}
 	}
